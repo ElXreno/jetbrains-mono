@@ -48,7 +48,7 @@ install -m 0644 -p %{SOURCE2} \
 
 # Add AppStream metadata
 install -Dm 0644 -p %{SOURCE1} \
-        %{buildroot}%{_datadir}/appdata/jetbrains-mono.metainfo.xml
+        %{buildroot}%{_datadir}/appdata/%{name}.metainfo.xml
 
 ln -s %{_fontconfig_templatedir}/%{priority}-%{fontname}.conf \
       %{buildroot}%{_fontconfig_confdir}/%{priority}-%{fontname}.conf
