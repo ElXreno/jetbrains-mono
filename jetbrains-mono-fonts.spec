@@ -6,7 +6,7 @@
 Name:           jetbrains-mono-fonts
 Version:        1.0.3
 Release:        2%{?dist}
-Summary:        JetBrains Mono – the free and open-source typeface for developers
+Summary:        JetBrains Mono - the free and open-source typeface for developers
 
 License:        ASL 2.0
 URL:            https://www.jetbrains.com/lp/mono/
@@ -24,7 +24,7 @@ Obsoletes:      jetbrains-mono <= %{version}-%{release}
 Provides:       jetbrains-mono = %{version}-%{release}
 
 %description
-JetBrains Mono – the free and open-source typeface for developers.
+JetBrains Mono - the free and open-source typeface for developers.
 
 
 %prep
