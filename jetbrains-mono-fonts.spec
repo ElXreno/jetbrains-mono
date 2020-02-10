@@ -5,7 +5,7 @@
 
 Name:           jetbrains-mono-fonts
 Version:        1.0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        JetBrains Mono – the free and open-source typeface for developers
 
 License:        ASL 2.0
@@ -19,7 +19,9 @@ BuildArch:      noarch
 BuildRequires:  libappstream-glib
 BuildRequires:  fontpackages-devel >= 1.13
 BuildRequires:  xorg-x11-font-utils
-# Requires:       
+
+Obsoletes:      jetbrains-mono <= %{version}-%{release}
+Provides:       jetbrains-mono = %{version}-%{release}
 
 %description
 JetBrains Mono – the free and open-source typeface for developers.
@@ -77,6 +79,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Mon Feb 10 2020 ElXreno <elxreno@gmail.com> - 1.0.3-2
+- Obsoletes and Provides jetbrains-mono
+
 * Sun Feb 09 2020 ElXreno <elxreno@gmail.com> - 1.0.3-1
 - Updated to version 1.0.3
 
