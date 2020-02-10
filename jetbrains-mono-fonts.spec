@@ -3,7 +3,7 @@
 
 %define catalogue %{_sysconfdir}/X11/fontpath.d
 
-Name:           jetbrains-mono
+Name:           jetbrains-mono-fonts
 Version:        1.0.3
 Release:        1%{?dist}
 Summary:        JetBrains Mono – the free and open-source typeface for developers
