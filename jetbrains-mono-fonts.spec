@@ -3,7 +3,7 @@
 Version:            1.0.3
 %forgemeta
 
-Release: 2%{?dist}
+Release: 3%{?dist}
 URL:     https://jetbrains.com/mono/
 
 %global foundry           JetBrains
@@ -12,7 +12,7 @@ URL:     https://jetbrains.com/mono/
 %global fontdocs          *md
 
 %global fontfamily        JetBrains Mono
-%global fontsummary       A monospace font family containing coding ligatures
+%global fontsummary       A mono-space font family containing coding ligatures
 %global fonts             ttf/*ttf
 %global fontconfngs       %{SOURCE10}
 %global fontdescription   %{expand:
@@ -56,6 +56,10 @@ Source10: 60-%{fontpkgname}.xml
 %fontfiles
 
 %changelog
+* Mon Mar 02 2020 Nicolas Mailhot <nim@fedoraproject.org>
+- 1.0.3-3
+✅ Lint, lint, lint and lint again
+
 * Sat Feb 22 2020 Nicolas Mailhot <nim@fedoraproject.org>
 - 1.0.3-2
 ✅ Rebuild with fonts-rpm-macros 2.0.2
