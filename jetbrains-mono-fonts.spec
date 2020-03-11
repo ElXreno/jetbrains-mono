@@ -3,7 +3,7 @@
 Version:            1.0.4
 %forgemeta
 
-Release: 2%{?dist}
+Release: 3%{?dist}
 URL:     https://jetbrains.com/mono/
 
 %global foundry           JetBrains
@@ -78,7 +78,7 @@ Source11: 58-%{fontpkgname1}.xml
 
 %changelog
 * Wed Mar 11 2020 Nicolas Mailhot <nim@fedoraproject.org>
-- 1.0.4-2
+- 1.0.4-3
 ✅ Addition of JetBrains Mono NL
 
 * Mon Mar 02 2020 Nicolas Mailhot <nim@fedoraproject.org>
