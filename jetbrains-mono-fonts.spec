@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: MIT
 %global forgeurl    https://github.com/JetBrains/JetBrainsMono
-Version:            1.0.3
+Version:            1.0.4
 %forgemeta
 
-Release: 3%{?dist}
+Release: 1%{?dist}
 URL:     https://jetbrains.com/mono/
 
 %global foundry           JetBrains
@@ -11,14 +11,10 @@ URL:     https://jetbrains.com/mono/
 %global fontlicenses      LICENSE
 %global fontdocs          *md
 
-%global fontfamily        JetBrains Mono
-%global fontsummary       A mono-space font family containing coding ligatures
-%global fonts             ttf/*ttf
-%global fontconfngs       %{SOURCE10}
-%global fontdescription   %{expand:
-JetBrains Mono is a developer-oriented font family.
+%global common_description %{expand:
+The JetBrains Mono project publishes developer-oriented font families.
 
-Its forms are simple and free from unnecessary details. Rendered in small
+Their forms are simple and free from unnecessary details. Rendered in small
 sizes, the text looks crisper. The easier the forms, the faster the eye
 perceives them and the less effort the brain needs to process them.
 
@@ -30,32 +26,59 @@ Characters remain standard in width, but the height of the lowercase is
 maximized. This approach keeps code lines to the length that developers expect,
 and it helps improve rendering since each letter occupies more pixels.
 
-JetBrains Mono uses a 9° italic angle; this maintains the optimal contrast to
-minimize distraction and eye strain. The usual angle is about 11°–12°.
+They use a 9° italic angle; this maintains the optimal contrast to minimize
+distraction and eye strain. The usual angle is about 11°–12°.}
 
-The inclusion of coding ligatures will enhance source code rendering at the
-expense of everything else.}
+%global fontfamily0       JetBrains Mono
+%global fontsummary0      A mono-space font family containing coding ligatures
+%global fontpkgheader0    %{expand:
+Suggests:  font(jetbrainsmononl)
+}
+%global fonts0            ttf/*ttf
+%global fontsex0          %{fonts1}
+%global fontconfngs0      %{SOURCE10}
+%global fontdescription0  %{expand:
+%{common_description}
+
+The first font family published by the project, JetBrains Mono, includes coding
+ligatures. They will enhance the rendering of source code but may be
+problematic for other use cases.}
+
+%global fontfamily1       JetBrains Mono NL
+%global fontsummary1      A mono-space coding font family
+%global fonts1            ttf/*MonoNL*ttf
+%global fontconfngs1      %{SOURCE11}
+%global fontdescription1  %{expand:
+%{common_description}
+
+The second font family published by the project, JetBrains Mono NL, is general
+purpose and free of coding ligatures.}
 
 Source0:  %{forgesource}
-Source10: 60-%{fontpkgname}.xml
+Source10: 60-%{fontpkgname0}.xml
+Source11: 58-%{fontpkgname1}.xml
 
-%fontpkg
+%fontpkg -a
 
 %prep
 %forgesetup
 
 %build
-%fontbuild
+%fontbuild -a
 
 %install
-%fontinstall
+%fontinstall -a
 
 %check
-%fontcheck
+%fontcheck -a
 
-%fontfiles
+%fontfiles -a
 
 %changelog
+* Wed Mar 11 2020 Nicolas Mailhot <nim@fedoraproject.org>
+- 1.0.4-1
+✅ Addition of JetBrains Mono NL
+
 * Mon Mar 02 2020 Nicolas Mailhot <nim@fedoraproject.org>
 - 1.0.3-3
 ✅ Lint, lint, lint and lint again
