@@ -4,8 +4,8 @@
 %define catalogue %{_sysconfdir}/X11/fontpath.d
 
 Name:           jetbrains-mono-fonts
-Version:        1.0.3
-Release:        2%{?dist}
+Version:        1.0.4
+Release:        1%{?dist}
 Summary:        JetBrains Mono - the free and open-source typeface for developers
 
 License:        ASL 2.0
@@ -79,6 +79,9 @@ appstream-util validate-relax --nonet \
 
 
 %changelog
+* Wed Mar 11 2020 ElXreno <elxreno@gmail.com> - 1.0.4-1
+- Updated to version 1.0.4
+
 * Mon Feb 10 2020 ElXreno <elxreno@gmail.com> - 1.0.3-2
 - Obsoletes and Provides jetbrains-mono
 
