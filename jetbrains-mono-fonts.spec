@@ -1,10 +1,14 @@
 # SPDX-License-Identifier: MIT
 %global forgeurl    https://github.com/JetBrains/JetBrainsMono
-Version:            1.0.4
+Version:            2.000
 %forgemeta
 
-Release: 5%{?dist}
+Release: 1%{?dist}
 URL:     https://jetbrains.com/mono/
+
+Source0:  %{forgesource}
+Source10: 60-%{fontpkgname0}.xml
+Source11: 58-%{fontpkgname1}.xml
 
 %global foundry           JetBrains
 %global fontlicense       ASL 2.0
@@ -54,10 +58,6 @@ problematic for other use cases.}
 The second font family published by the project, JetBrains Mono NL, is general
 purpose and free of coding ligatures.}
 
-Source0:  %{forgesource}
-Source10: 60-%{fontpkgname0}.xml
-Source11: 58-%{fontpkgname1}.xml
-
 %fontpkg -a
 
 %fontmetapkg
@@ -77,6 +77,9 @@ Source11: 58-%{fontpkgname1}.xml
 %fontfiles -a
 
 %changelog
+* Sat Jul 11 2020 ElXreno <elxreno@gmail.com> - 2.000-1
+- Update to version 2.000
+
 * Thu Apr 02 2020 Nicolas Mailhot <nim@fedoraproject.org>
 - 1.0.4-5
 💥 Actually rebuild with fonts-rpm-macros 2.0.4 to make sure fontconfig files are
