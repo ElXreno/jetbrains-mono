@@ -3,7 +3,7 @@
 Version:            2.200
 %forgemeta
 
-Release: 1%{?dist}
+Release: 2%{?dist}
 URL:     https://jetbrains.com/mono/
 
 Source0:  %{forgesource}
@@ -38,7 +38,7 @@ distraction and eye strain. The usual angle is about 11°–12°.}
 %global fontpkgheader0    %{expand:
 Suggests:  font(jetbrainsmononl)
 }
-%global fonts0            ttf/*ttf
+%global fonts0            fonts/ttf/*ttf
 %global fontsex0          %{fonts1}
 %global fontconfngs0      %{SOURCE10}
 %global fontdescription0  %{expand:
@@ -50,7 +50,7 @@ problematic for other use cases.}
 
 %global fontfamily1       JetBrains Mono NL
 %global fontsummary1      A mono-space coding font family
-%global fonts1            ttf/*MonoNL*ttf
+%global fonts1            fonts/ttf/*MonoNL*ttf
 %global fontconfngs1      %{SOURCE11}
 %global fontdescription1  %{expand:
 %{common_description}
@@ -77,6 +77,9 @@ purpose and free of coding ligatures.}
 %fontfiles -a
 
 %changelog
+* Wed Oct 21 23:43:45 +03 2020 ElXreno <elxreno@gmail.com> - 2.200-2
+- Fix fonts
+
 * Wed Oct 21 23:27:11 +03 2020 ElXreno <elxreno@gmail.com> - 2.200-1
 - Update to version 2.200
 
