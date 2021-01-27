@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 %global forgeurl    https://github.com/JetBrains/JetBrainsMono
-Version:            2.221
+Version:            2.225
 %forgemeta
 
 Release: 1%{?dist}
@@ -77,6 +77,9 @@ purpose and free of coding ligatures.}
 %fontfiles -a
 
 %changelog
+* Wed Jan 27 2021 ElXreno <elxreno@gmail.com> - 2.225-1
+- Update to version 2.225
+
 * Wed Dec 30 06:58:49 +03 2020 ElXreno <elxreno@gmail.com> - 2.221-1
 - Update to version 2.221
 
